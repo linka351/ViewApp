@@ -5,13 +5,13 @@ const Header = () => {
         <div className={"container"}>
             <div className={"header"}>
                 <div className={"logo"}>
-                    <h1>View<span className={"header_color"}>App</span></h1>
+                    <h1 className={"header_color"}>View<span>App</span></h1>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href={"#"}>Ulubione</a></li>
-                        <li>Obejrzane</li>
-                        <li>Do obejrzenia</li>
+                        <li><a href={"#"} role={"button"}>Ulubione</a></li>
+                        <li><a href={"#"}>Obejrzane</a></li>
+                        <li><a href={"#"}>Do obejrzenia</a></li>
                     </ul>
                 </nav>
             </div>
