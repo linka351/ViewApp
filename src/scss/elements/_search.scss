@@ -1,0 +1,63 @@
+@import "settings/colors";
+
+.main {
+
+  background-color: white;
+  width: 100%;
+  height: calc(100vh - 6rem);
+  border-radius: 5px;
+
+  h2 {
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+  .search_movie_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 4rem;
+    text-align: center;
+
+    .search_movie_label {
+      font-size: 2rem;
+      color: $color-black;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .search_movie_input {
+      font-size: 2.2rem;
+      padding: 0.5rem 2rem;
+      line-height: 2rem;
+      border-radius: 20px;
+      border: 1 px solid $color-black;
+      margin-bottom: 0.8rem;
+    }
+
+    .search_movie_button {
+      background-color: $color-black;
+      color: $color-white;
+      font-size: 2rem;
+      padding: 0.8rem 1.2rem;
+      border: 1px solid $color-black;
+      border-radius: 20px;
+      cursor: pointer;
+
+    }
+    .search_movie_button:hover {
+      background-color: lighten($color-black, 10%);
+    }
+
+  }
+
+}
+
+.search_movie_container {
+  width: 60rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
