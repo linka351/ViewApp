@@ -9,9 +9,9 @@ const Header = () => {
                 </div>
                 <nav>
                     <ul>
-                        <li><a href={"#"} role={"button"}>Ulubione</a></li>
-                        <li><a href={"#"}>Obejrzane</a></li>
-                        <li><a href={"#"}>Do obejrzenia</a></li>
+                        <li><a href={"/"}>Ulubione</a></li>
+                        <li><a href={"/"}>Obejrzane</a></li>
+                        <li><a href={"/"}>Do obejrzenia</a></li>
                     </ul>
                 </nav>
             </div>
