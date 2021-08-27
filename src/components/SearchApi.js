@@ -1,32 +1,31 @@
 import React, {useState, useEffect} from "react";
 import TextName from "./SearchAppComponents/TextName";
 import BoxSearch from "./SearchAppComponents/BoxSearch";
+import MovieList from "./SearchAppComponents/MovieList";
 
 const SearchApi = () => {
     const [movies, setMovies] = useState([]);
-    const [searchValue, setSearchValue] = useState('');
+    const [search, setSearch] = useState('');
 
-    const getMovieRequest = async () => {
-        const url = `https://www.omdbapi.com/?i=tt3896198&apikey=9d83e569`;
-
+    const MovieSearch = async () => {
+        const url = `https://www.omdbapi.com/?s=${search}&apikey=9d83e569`;
         const response = await fetch(url);
         const responseJson = await response.json();
-
-        console.log(responseJson);
-        setMovies(responseJson.Search)
+        if(responseJson.Search) {
+            setMovies(responseJson.Search);
+        }
     };
 
-
     useEffect( () => {
-        getMovieRequest();
-    }, [searchValue])
-
+        MovieSearch(search);
+    }, [search]);
 
     return (
         <div className={"container"}>
             <div className={"main"}>
                 <TextName/>
-                <BoxSearch searchValue={searchValue} setSearchValue={setSearchValue}/>
+                <BoxSearch searchValue={search} setSearchValue={setSearch}/>
+                <MovieList movies={movies}/>
             </div>
         </div>
 

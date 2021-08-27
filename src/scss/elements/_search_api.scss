@@ -45,14 +45,12 @@
       border: 1px solid $color-black;
       border-radius: 20px;
       cursor: pointer;
-
     }
+
     .search_movie_button:hover {
       background-color: lighten($color-black, 10%);
     }
-
   }
-
 }
 
 .search_movie_container {
