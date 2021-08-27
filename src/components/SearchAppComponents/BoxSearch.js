@@ -11,6 +11,7 @@ const BoxSearch = ({value, setSearchValue}) => {
                         type={"text"}
                         name={"query"} placeholder={"Nazwa filmu"} value={value}
                         onChange={(event) => setSearchValue(event.target.value)}
+                        autoComplete={"off"}
                     />
                     <button className={"search_movie_button"} type={"submit"}>Szukaj</button>
                 </form>

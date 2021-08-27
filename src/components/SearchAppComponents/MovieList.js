@@ -3,9 +3,13 @@ import React from "react";
 const MovieList = ({movies}) => {
     return (
         <>
-            {movies.map((movie, index) => <div>
-                <img src={movie.Poster} alt={"movie"}/>
-            </div>)}
+            <div className={"image_container"}>
+            {movies.map((movie, index) => (
+                <div>
+                    <img className={"image_box"} src={movie.Poster} alt={"movie"}/>
+                </div>
+            ))}
+            </div>
         </>
     )
 }

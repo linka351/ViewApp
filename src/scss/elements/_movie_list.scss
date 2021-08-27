@@ -1,0 +1,14 @@
+@import "settings/colors";
+
+.image_container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .image_box {
+    height: 20rem;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+  }
+
+}
