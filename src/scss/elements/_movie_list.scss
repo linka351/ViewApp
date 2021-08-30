@@ -6,9 +6,27 @@
   overflow-x: auto;
 
   .image_box {
-    height: 20rem;
+    height: 25rem;
     padding-left: 0.5rem;
-    padding-top: 1rem;
+    padding-top: 3rem;
+  }
+
+  .image_button {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    .left_image_button {
+      color: green;
+      font-size: 2rem;
+    }
+
+    .right_image_button {
+      font-size: 2rem;
+      color: gold;
+
+    }
   }
 
 }
