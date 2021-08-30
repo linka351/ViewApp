@@ -12,20 +12,33 @@
   }
 
   .image_button {
-    padding-left: 0.5rem;
     padding-top: 0.5rem;
     display: flex;
     justify-content: space-between;
 
     .left_image_button {
-      color: green;
-      font-size: 2rem;
+
+      button {
+        color: #264f1b;
+        font-size: 2rem;
+        border: none;
+        background-color: $color-white;
+
+        :hover {
+          color: lighten(#264f1b, 10%);
+          transform: scale(1.03);
+        }
+      }
     }
 
     .right_image_button {
-      font-size: 2rem;
-      color: gold;
 
+      button {
+        font-size: 2rem;
+        color: gold;
+        border: none;
+        background-color: $color-white;
+      }
     }
   }
 
