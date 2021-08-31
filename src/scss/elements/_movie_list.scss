@@ -25,7 +25,7 @@
         background-color: $color-white;
 
         :hover {
-          color: lighten(#264f1b, 10%);
+          color: darken(#264f1b, 10%);
           transform: scale(1.03);
         }
       }
@@ -38,6 +38,11 @@
         color: gold;
         border: none;
         background-color: $color-white;
+
+        :hover {
+          color: darken(gold, 10%);
+          transform: scale(1.03);
+        }
       }
     }
   }

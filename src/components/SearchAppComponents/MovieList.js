@@ -1,5 +1,5 @@
 import React from "react";
-import { FaStar, FaPlusCircle, FaClock } from 'react-icons/fa';
+import { FaStar, FaPlusCircle } from 'react-icons/fa';
 import ReactTooltip from "react-tooltip";
 
 
@@ -32,7 +32,6 @@ const MovieList = ({movies}) => {
                         </ReactTooltip>
                     </div>
                 </div>
-
             ))}
 
             </div>
