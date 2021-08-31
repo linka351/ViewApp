@@ -7,7 +7,7 @@ import {Watched} from "./components/Watched";
 
 function App() {
   return (
-    <>
+      <>
       <BrowserRouter>
         <Header />
         <Switch>

@@ -4,7 +4,9 @@ export const ToWatch = () => {
     return (
         <div className={"container"}>
             <div className={"main"}>
-                <h1>Add Page</h1>
+                <div className={"to_watch"}>
+                    <h2>Twoje filmy do obejrzenia </h2>
+                </div>
             </div>
         </div>
     )

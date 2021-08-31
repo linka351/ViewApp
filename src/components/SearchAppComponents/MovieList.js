@@ -6,6 +6,11 @@ import ReactTooltip from "react-tooltip";
 
 
 const MovieList = ({movies}) => {
+    const addToFavourites = (movieID) => {
+        const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+        favourites.push(movieID)
+        localStorage.setItem("favourites", JSON.stringify(favourites));
+    }
 
     return (
         <>
@@ -25,7 +30,7 @@ const MovieList = ({movies}) => {
                             Dodaj film do obejrzenia
                         </ReactTooltip>
                         <div className={"right_image_button"}>
-                            <button data-tip data-for="add_to_favourites"><FaStar/></button>
+                            <button data-tip data-for="add_to_favourites" onClick={() => addToFavourites(movie)}><FaStar/></button>
                         </div>
                         <ReactTooltip id="add_to_favourites" place="top" effect="solid">
                             Dodaj do ulubionych
