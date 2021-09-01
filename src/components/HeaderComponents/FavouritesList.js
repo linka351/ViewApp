@@ -34,7 +34,7 @@ const FavouritesList = ({movies}) => {
                             <ReactTooltip id="add_to_watched" place="top" effect="solid">
                                 Dodaj film do obejrzanych
                             </ReactTooltip>
-                            <div className={"right_image_button"}>
+                            <div className={"trash_button"}>
                                 <button data-tip data-for="delete_from_favourites"><FaTrashAlt/></button>
                             </div>
                             <ReactTooltip id="delete_from_favourites" place="top" effect="solid">

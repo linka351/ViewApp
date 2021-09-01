@@ -7,7 +7,7 @@ export const Watched = () => {
     return (
         <div className={"container"}>
             <div className={"main"}>
-                <h2>Twoje ulubione filmy</h2>
+                <h2>Filmy które już widziałeś</h2>
                 <WatchedList movies={watched}/>
             </div>
         </div>

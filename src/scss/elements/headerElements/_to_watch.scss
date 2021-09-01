@@ -1,0 +1,45 @@
+@import "settings/colors";
+
+.to_watch_button {
+
+  .add_to_watched_button {
+    color: #264f1b;
+    font-size: 2rem;
+    border: none;
+    background-color: $color-white;
+
+    :hover {
+      color: darken(#264f1b, 10%);
+      transform: scale(1.03);
+    }
+  }
+
+  .add_to_favourites_button {
+    font-size: 2rem;
+    color: gold;
+    border: none;
+    background-color: $color-white;
+
+    :hover {
+      color: darken(gold, 10%);
+      transform: scale(1.03);
+    }
+  }
+}
+
+
+.trash_button {
+  button {
+    color: grey;
+    font-size: 2rem;
+    background-color: $color-white;
+    border: none;
+
+    :hover {
+      color: darken(grey, 10%);
+      transform: scale(1.03);
+    }
+
+  }
+}
+

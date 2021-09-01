@@ -7,7 +7,7 @@ export const ToWatch = () => {
     return (
         <div className={"container"}>
             <div className={"main"}>
-                <h2>Twoje ulubione filmy</h2>
+                <h2>Filmy które chcesz zobaczyć</h2>
                 <ToWatchList movies={watch}/>
             </div>
         </div>
