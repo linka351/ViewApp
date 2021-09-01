@@ -1,5 +1,5 @@
 import React from "react";
-import MovieList from "./SearchAppComponents/MovieList";
+import FavouritesList from "./HeaderComponents/FavouritesList";
 
 export const Favourites = () => {
 
@@ -9,7 +9,7 @@ export const Favourites = () => {
         <div className={"container"}>
             <div className={"main"}>
                 <h2>Twoje ulubione filmy</h2>
-                <MovieList movies={favourites}/>
+                <FavouritesList movies={favourites}/>
             </div>
             </div>
     )

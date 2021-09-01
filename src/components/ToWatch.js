@@ -1,5 +1,5 @@
 import React from "react";
-import MovieList from "./SearchAppComponents/MovieList";
+import ToWatchList from "./HeaderComponents/ToWatchList";
 
 export const ToWatch = () => {
     const watch = JSON.parse(localStorage.getItem("watch")) || [];
@@ -8,7 +8,7 @@ export const ToWatch = () => {
         <div className={"container"}>
             <div className={"main"}>
                 <h2>Twoje ulubione filmy</h2>
-                <MovieList movies={watch}/>
+                <ToWatchList movies={watch}/>
             </div>
         </div>
     )
