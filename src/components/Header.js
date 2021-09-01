@@ -6,7 +6,7 @@ const Header = () => {
         <div className={"container"}>
             <div className={"header"}>
                 <div className={"logo"}>
-                    <h1 className={"header_color"}>View<span>App</span></h1>
+                    <a href={"/"}> <h1 className={"header_color"}>View<span>App</span></h1></a>
                 </div>
                 <nav>
                     <ul>
