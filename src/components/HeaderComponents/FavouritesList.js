@@ -16,6 +16,11 @@ const FavouritesList = ({movies}) => {
         watch.push(movieID)
         localStorage.setItem("watch", JSON.stringify(watch));
     }
+    const removeFromFavourites = (movieID) => {
+        const removeFavourites = JSON.parse(localStorage.getItem("removeFavourites")) || [];
+        const filtered = removeFavourites.filter((movie) => {return movie.imdbID !== movieID; });
+        localStorage.setItem("remove_Favourites", JSON.stringify(filtered));
+    }
 
     return (
         <>
@@ -35,7 +40,7 @@ const FavouritesList = ({movies}) => {
                                 Dodaj film do obejrzanych
                             </ReactTooltip>
                             <div className={"trash_button"}>
-                                <button data-tip data-for="delete_from_favourites"><FaTrashAlt/></button>
+                                <button data-tip data-for="delete_from_favourites" onClick={() => removeFromFavourites(movie)}><FaTrashAlt/></button>
                             </div>
                             <ReactTooltip id="delete_from_favourites" place="top" effect="solid">
                                 Usuń z ulubionych

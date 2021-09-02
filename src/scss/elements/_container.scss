@@ -4,3 +4,26 @@
    margin: 0 auto;
    width: 113rem;
  }
+
+ @media (max-width: 640px) {
+   .container {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+   }
+ }
+
+ @media (min-width: 641px) and (max-width: 1024px) {
+   .container {
+     width: 100vw;
+     display: flex;
+     justify-content: center;
+   }
+ }
+ @media (min-width: 1025px) and (max-width: 1366px){
+   .container {
+     width: 100vw;
+     display: flex;
+     justify-content: center;
+   }
+ }

@@ -26,6 +26,7 @@ const MovieList = ({movies}) => {
 
     return (
         <>
+            <div className={"main"}>
             <div className={"image_container"}>
             {movies.map((movie, index) => (
                 <div>
@@ -52,6 +53,8 @@ const MovieList = ({movies}) => {
             ))}
 
             </div>
+            </div>
+
         </>
     )
 }

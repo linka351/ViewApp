@@ -59,3 +59,30 @@
   justify-content: center;
   margin: 0 auto;
 }
+
+@media (max-width: 640px){
+  .main {
+    height: 100%;
+    .search_movie_container {
+      width: 100vw;
+
+      .search_movie_label {
+        font-size: 2rem;
+      }
+
+      .search_movie_input {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+      }
+      .search_movie_button {
+        margin-bottom: 10rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .main {
+    height: 100vh;
+  }
+}
