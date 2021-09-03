@@ -27,9 +27,9 @@ const ToWatchList = () => {
     }
 
     const addToWatched = (movieID) => {
-        const watch = JSON.parse(localStorage.getItem("watch")) || [];
+        const watch = JSON.parse(localStorage.getItem("watched")) || [];
         watch.push(movieID)
-        localStorage.setItem("watch", JSON.stringify(watch));
+        localStorage.setItem("watched", JSON.stringify(watch));
     }
 
     return (

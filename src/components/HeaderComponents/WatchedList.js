@@ -13,7 +13,7 @@ const WatchedList = () => {
         localStorage.setItem("watched", JSON.stringify(movies))
     }, [movies]);
 
-    function handleDeleteClick(id) {
+    function DeleteClick(id) {
         const removeItem = movies.filter((movie) => {
             return movie.imdbID !== id;
         });
@@ -27,9 +27,9 @@ const WatchedList = () => {
     }
 
     const addToWatch = (movieID) => {
-        const watched = JSON.parse(localStorage.getItem("watched")) || [];
+        const watched = JSON.parse(localStorage.getItem("watch")) || [];
         watched.push(movieID)
-        localStorage.setItem("watched", JSON.stringify(watched));
+        localStorage.setItem("watch", JSON.stringify(watched));
     }
 
     return (
@@ -51,7 +51,7 @@ const WatchedList = () => {
                                     Dodaj film do ulubionych
                                 </ReactTooltip>
                                 <div className={"trash_button"}>
-                                    <button data-tip data-for="delete_from_watched" onClick={() => handleDeleteClick(movie.imdbID)}><FaTrashAlt/></button>
+                                    <button data-tip data-for="delete_from_watched" onClick={() => DeleteClick(movie.imdbID)}><FaTrashAlt/></button>
                                 </div>
                                 <ReactTooltip id="delete_from_watched" place="top" effect="solid">
                                     Usuń z obejrzanych
