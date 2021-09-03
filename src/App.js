@@ -1,9 +1,9 @@
 import {BrowserRouter, Switch, Route} from "react-router-dom";
-import Home from "./components/Home";
-import Header from "./components/Header";
-import {ToWatch} from "./components/ToWatch";
-import {Favourites} from "./components/Favourites";
-import {Watched} from "./components/Watched";
+import Home from "./components/NavElements/Home";
+import Header from "./components/NavElements/Header";
+import {ToWatch} from "./components/NavElements/ToWatch";
+import {Favourites} from "./components/NavElements/Favourites";
+import {Watched} from "./components/NavElements/Watched";
 
 function App() {
   return (

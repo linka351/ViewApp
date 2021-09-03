@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import TextName from "./SearchMovieComponents/TextName";
-import BoxSearch from "./SearchMovieComponents/BoxSearch";
-import MovieList from "./SearchMovieComponents/MovieList";
+import TextName from "../SearchMovieComponents/TextName";
+import BoxSearch from "../SearchMovieComponents/BoxSearch";
+import MovieList from "../SearchMovieComponents/MovieList";
 
 const SearchMovie = () => {
     const [movies, setMovies] = useState([]);

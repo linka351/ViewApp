@@ -1,5 +1,5 @@
 import React from "react";
-import WatchedList from "./HeaderComponents/WatchedList";
+import WatchedList from "../HeaderComponents/WatchedList";
 export const Watched = () => {
 
     const watched = JSON.parse(localStorage.getItem("watched")) || [];
