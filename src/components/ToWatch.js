@@ -8,7 +8,7 @@ export const ToWatch = () => {
         <div className={"container"}>
             <div className={"main"}>
                 <h2>Filmy które chcesz zobaczyć</h2>
-                <ToWatchList movies={watch}/>
+                <ToWatchList/>
             </div>
         </div>
     )

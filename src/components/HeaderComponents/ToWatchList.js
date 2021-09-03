@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {FaPlusCircle, FaStar, FaTrashAlt} from 'react-icons/fa';
 import ReactTooltip from "react-tooltip";
 
 
-const ToWatchList = ({movies}) => {
+const ToWatchList = () => {
+
+    const [movies, setMovies] = useState(() => {
+        return JSON.parse(localStorage.getItem("watch")) || []
+    });
+
+    useEffect(() => {
+        localStorage.setItem("watch", JSON.stringify(movies))
+    }, [movies]);
+
+    function handleDeleteClick(id) {
+        const removeItem = movies.filter((movie) => {
+            return movie.imdbID !== id;
+        });
+        setMovies(removeItem)
+    }
 
     const addToFavourites = (movieID) => {
         const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
@@ -36,7 +51,7 @@ const ToWatchList = ({movies}) => {
                                     Dodaj film do ulubionych
                                 </ReactTooltip>
                                 <div className={"trash_button"}>
-                                    <button data-tip data-for="delete_from_watched"><FaTrashAlt/></button>
+                                    <button data-tip data-for="delete_from_watched" onClick={() => handleDeleteClick(movie.imdbID)}><FaTrashAlt/></button>
                                 </div>
                                 <ReactTooltip id="delete_from_watched" place="top" effect="solid">
                                     Usuń z filmów do obejrzenia

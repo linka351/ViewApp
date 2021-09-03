@@ -1,10 +1,10 @@
 import React from 'react';
-import SearchApi from "./SearchApi";
+import SearchMovie from "./SearchMovie";
 
 const Home = () => {
     return (
         <div>
-            <SearchApi />
+            <SearchMovie />
         </div>
     );
 };

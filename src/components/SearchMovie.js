@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
-import TextName from "./SearchAppComponents/TextName";
-import BoxSearch from "./SearchAppComponents/BoxSearch";
-import MovieList from "./SearchAppComponents/MovieList";
+import TextName from "./SearchMovieComponents/TextName";
+import BoxSearch from "./SearchMovieComponents/BoxSearch";
+import MovieList from "./SearchMovieComponents/MovieList";
 
-const SearchApi = () => {
+const SearchMovie = () => {
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState('');
 
@@ -32,4 +32,4 @@ const SearchApi = () => {
     )
 }
 
-export default SearchApi;
+export default SearchMovie;

@@ -8,7 +8,7 @@ export const Watched = () => {
         <div className={"container"}>
             <div className={"main"}>
                 <h2>Filmy które już widziałeś</h2>
-                <WatchedList movies={watched}/>
+                <WatchedList/>
             </div>
         </div>
     )

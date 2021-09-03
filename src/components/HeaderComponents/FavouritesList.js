@@ -3,26 +3,20 @@ import {FaPlusCircle, FaTrashAlt} from 'react-icons/fa';
 import ReactTooltip from "react-tooltip";
 
 
-const FavouritesList = ({movies}) => {
-    const [removeMovies, setRemoveMovies] = useState(() => {
-        const savedRemoveMovies = localStorage.getItem("removeMovies");
-        if (savedRemoveMovies) {
-            return JSON.parse(savedRemoveMovies);
-        }else {
-            return [];
-        }
+const FavouritesList = () => {
+    const [movies, setMovies] = useState(() => {
+        return JSON.parse(localStorage.getItem("favourites")) || []
     });
 
-    const [trash, setTrash] = useState("")
-
     useEffect(() => {
-        localStorage.setItem("removeMovies", JSON.stringify(removeMovies))
-    }, [removeMovies]);
+        localStorage.setItem("favourites", JSON.stringify(movies))
+    }, [movies]);
+
     function handleDeleteClick(id) {
-        const removeItem = removeMovies.filter((trash) => {
-            return removeMovies.id !== id;
+        const removeItem = movies.filter((movie) => {
+            return movie.imdbID !== id;
         });
-        setRemoveMovies(removeItem)
+        setMovies(removeItem)
     }
 
     const addToWatched = (movieID) => {
@@ -57,7 +51,7 @@ const FavouritesList = ({movies}) => {
                                     Dodaj film do obejrzanych
                                 </ReactTooltip>
                                 <div className={"trash_button"}>
-                                    <button data-tip data-for="delete_from_favourites" onClick={() => handleDeleteClick(removeMovies.id)}><FaTrashAlt/></button>
+                                    <button data-tip data-for="delete_from_favourites" onClick={() => handleDeleteClick(movie.imdbID)}><FaTrashAlt/></button>
                                 </div>
                                 <ReactTooltip id="delete_from_favourites" place="top" effect="solid">
                                     Usuń z ulubionych

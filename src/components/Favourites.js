@@ -9,7 +9,7 @@ export const Favourites = () => {
         <div className={"container"}>
             <div className={"main"}>
                 <h2>Twoje ulubione filmy</h2>
-                <FavouritesList movies={favourites}/>
+                <FavouritesList/>
             </div>
             </div>
     )
